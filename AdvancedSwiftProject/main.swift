@@ -7,7 +7,8 @@
 
 import Foundation
 
-let classCL = MotorcycleClass(brandInput: "BMW", modelInput: "S1000RR-HP4", yearInput: 2013)
+
+/*let classCL = MotorcycleClass(brandInput: "BMW", modelInput: "S1000RR-HP4", yearInput: 2013)
 
 var classSL = MotorcycleStruct(brand: "Honda", model: "CBR1000RR-R SP Fireblade", year: 2020)
 
@@ -96,5 +97,40 @@ print(x)
 x+=1
  
 print(x)
+*/
+
+
+//PROTOCOL == INTERFACE
+protocol Riding {
+   
+    func stop()
+}
+
+class Motorcycle {
+    
+    func start(){}
+}
+
+class BMW : Motorcycle, Riding {
+    override  func start() {
+        print("start")
+    }
+    
+    func stop() {
+        print("stop")
+    }
+ }
+
+let bmw = BMW()
+bmw.start()
+
+
+struct Kawasaki : Riding {
+    func stop() {
+        <#code#>
+    }
+    
+    
+}
 
 
